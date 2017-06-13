@@ -1,0 +1,33 @@
+{ "characters": [{
+    "name": "Gary",
+    "age": 23,
+    "gender": "male",
+    "points": 0
+  }, {
+    "name":"Stephanie",
+    "age": 19,
+    "gender": "female",
+    "points": 3
+  }],
+  "pages": [{
+    "id":1,
+    "description":"Page 1 lorem ipsum",
+    "options":"option 1"
+  },{
+    "id":2,
+    "description":"Page 2 lorem ipsum",
+    "options":"option 2"
+  },{
+    "id":3,
+    "description":"Page 3 lorem ipsum",
+    "options":"option 3"
+  },{
+    "id":4,
+    "description":"Page 4 lorem ipsum",
+    "options":"option 1"
+  },{
+    "id":5,
+    "description":"Page 5 lorem ipsum",
+    "options":"option 5"
+  }]
+}

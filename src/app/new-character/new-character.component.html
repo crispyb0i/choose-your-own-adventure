@@ -1,0 +1,32 @@
+<div *ngIf='newCharacter' class="container">
+  <h4>Create Your Character</h4>
+  <div class="form-group">
+    <label>Enter your name:</label>
+    <input #name>
+    <label>Enter your age:</label>
+    <input #age type="number">
+    <select #gender>
+      <option value='male'>Male</option>
+      <option value='female'>Female</option>
+    </select>
+    <button type="button" (click)="submitForm(name.value, age.value, gender.value); name.value='';age.value=''">Submit</button>
+  </div>
+  <button type="button" (click)='switch()'>Select Existing Character</button>
+</div>
+
+<div class="container" *ngIf='!newCharacter'>
+  <select #selectedChar>
+    <option *ngFor='let character of characters | async' value='{{character.$key}}'>{{character.name}}</option>
+  </select>
+  <button (click)='selectCharacter(selectedChar.value)'>Select</button>
+  <button type="button" (click)='switch()'>Create New Character</button>
+</div>
+
+<div class="container" *ngIf='selectedCharacter'>
+  <h3>Chosen Character: {{(selectedCharacter|async)?.name}}</h3>
+
+</div>
+
+<div class="container">
+  <button type="button" (click)="startAdventure()">Start Adventure</button>
+</div>
